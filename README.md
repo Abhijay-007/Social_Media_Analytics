@@ -33,17 +33,17 @@ Designed with an ultra-crisp, desktop-first **Sapphire Royal Blue & Ice White** 
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
-### 1. 🕸️ High-Fidelity D3 Network Topology & Personal Ego Networks
+### 1.  High-Fidelity D3 Network Topology & Personal Ego Networks
 - **Global Network Constellation**: Interactive force-directed physics graph with community modularity detection across thematic clusters.
 - **Account-Level Personal Ego Networks**: Clicking or searching any user transitions the canvas to a dedicated **Ego Network View**:
   - Central node spotlight with glowing beacon and pulsating ring.
   - Radial arrangement of direct alters (peers).
-  - Labeled interaction links denoting connection types (`💬 Co-Chatter`, `👥 Follower`, `✍️ Commented`, `⚡ Interacted`).
+  - Labeled interaction links denoting connection types (` Co-Chatter`, ` Follower`, ` Commented`, ` Interacted`).
   - Click-to-traverse functionality allowing instant exploration across user relationships.
 
-### 2. 👥 Global Location Analytics & Demographic Intelligence
+### 2.  Global Location Analytics & Demographic Intelligence
 - **1,200+ Profile Dataset**: Audience telemetry across 37 countries and 50+ metropolitan centers.
 - **Geographic Country Breakdown**: Top concentrations with country flags and percentage shares (India, USA, China, Canada, UK, Australia, South Africa, Italy).
 - **Urban Metro Coordinates**: Precise latitude/longitude coordinates (Rome, Mexico City, Toronto, Pune, Denver, Houston, Berlin, Shanghai).
@@ -52,23 +52,23 @@ Designed with an ultra-crisp, desktop-first **Sapphire Royal Blue & Ice White** 
 - **Behavioral Audience Personas**: Structured tiers including *Professional Analyst*, *Data Analyst*, *Journalist*, *Researcher*, *Coach*, *Scout*, *Community Builder*, and *Content Creator*.
 - **Category Affinity Matrix**: Cross-tabulated demographic affinity scores across Tech, Design, Sports, Cinema, and Lifestyle.
 
-### 3. 🤖 Neural RAG Knowledge Engine
+### 3.  Neural RAG Knowledge Engine
 - Semantically indexes **4,600+ social discourse documents** and demographic profiles using vector embeddings (`sentence-transformers/all-MiniLM-L6-v2`).
 - Grounded executive synthesis summarizing cross-platform discourse, sentiment polarity spreads, and verified evidence cards.
 - Interactive prompt chips for exploring topics, user accounts, and location patterns.
 
-### 4. 🧪 Live Sentiment Alchemist
+### 4.  Live Sentiment Alchemist
 - Real-time text evaluation using **`cardiffnlp/twitter-roberta-base-sentiment-latest`** (RoBERTa transformer).
 - Provides polarity classification (Positive / Neutral / Critical), neural confidence ratings, and percentage resonance breakdowns.
 
-### 5. 🖥️ Desktop-First, Clean Percentage UI
+### 5.  Desktop-First, Clean Percentage UI
 - Expansive widescreen layout (optimized up to 1600px+).
 - High-DPI canvas scaling (`devicePixelRatio: 2x`) for razor-sharp charts on Retina/4K displays.
 - Strict **percentage-based metric formatting**—no raw integer clutter.
 
 ---
 
-## ⚡ Real-Time Data Generation & Extraction (Avengers Assemble)
+##  Real-Time Data Generation & Extraction (Avengers Assemble)
 
 To generate, simulate, and capture authentic, multi-channel social media activity in real time, this project connects to a live companion web platform:
 
@@ -93,7 +93,7 @@ To generate, simulate, and capture authentic, multi-channel social media activit
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
@@ -145,7 +145,7 @@ To generate, simulate, and capture authentic, multi-channel social media activit
 
 ---
 
-## 📱 Supported Platforms
+##  Supported Platforms
 
 | Platform | Channel Label | Scope / Data Focus |
 | :--- | :--- | :--- |
@@ -219,7 +219,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🏃 Running the Application
+##  Running the Application
 
 Launch the server:
 ```bash
@@ -233,7 +233,7 @@ The observatory will be accessible at:
 
 ---
 
-## 🔄 Data Extraction & Processing Pipeline
+##  Data Extraction & Processing Pipeline
 
 The pipeline ingests real-time events streamed from [Avengers Assemble](https://northstrake.github.io/avengers-assemble/) into Firestore, then normalizes and enriches the data into graph topologies and demographic profiles:
 
@@ -264,7 +264,7 @@ curl -X POST http://localhost:7860/api/extract
 
 ---
 
-## 🔌 REST API Reference
+##  REST API Reference
 
 ### `GET /api/data`
 Returns multi-platform metrics, platform feed posts, author distributions, hashtag trends, and D3 network graph nodes & edges.
@@ -309,33 +309,33 @@ Triggers the multi-stage extraction pipeline and re-indexes the RAG corpus in th
 
 The platform contains 6 primary analytical views:
 
-1. **🕸️ Network Graph & Dossier**:
+1. ** Network Graph & Dossier**:
    - D3.js force-directed constellation graph.
    - Zoom, pan, center, and pause physics simulation controls.
    - Search bar for locating users by handle (`@username`), city, or country.
    - Persona filters (`Data Analyst`, `Professional Analyst`, `Community Builder`, etc.).
    - Full User Dossier panel featuring ego ties, observed content preferences, and recent discourse.
-2. **👥 Location & Demographics**:
+2. ** Location & Demographics**:
    - Geographic country ranking bars with flags.
    - City cards displaying `lat`/`lng` coordinates.
    - Language and occupational leaderboards.
    - Age pyramid and cross-tabulated affinity matrix.
-3. **🤖 Neural RAG Knowledge Engine**:
+3. ** Neural RAG Knowledge Engine**:
    - Natural language search box with pre-built prompt chips.
    - AI synthesis card with polarity distribution bars.
    - Grounded context snippets with platform indicators and relevance match percentages.
-4. **📊 Overview & Topics**:
+4. ** Overview & Topics**:
    - Ultra-crisp high-DPI Sentiment Equilibrium doughnut chart.
    - Top Narrative Themes horizontal bar chart.
-5. **📜 Channel Chronicle**:
+5. ** Channel Chronicle**:
    - Multi-platform chronological feed with author badges, tags, and comment threads.
    - Real-time author and keyword filter.
-6. **🧪 Live Sentiment Alchemist**:
+6. ** Live Sentiment Alchemist**:
    - Interactive prompt evaluation workspace powered by RoBERTa.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Backend**: [FastAPI](https://fastapi.tiangolo.com), [Uvicorn](https://www.uvicorn.org), [Python 3.10+](https://python.org)
 - **Live Ingestion Source**: [Avengers Assemble](https://northstrake.github.io/avengers-assemble/), [Google Cloud Firebase / Firestore](https://firebase.google.com/)
