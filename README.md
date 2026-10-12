@@ -284,4 +284,7 @@ The platform contains 6 primary analytical views:
 - **Design System**: Sapphire Royal Blue & Ice White glassmorphism, responsive CSS variables, High-DPI Canvas scaling
 
 ---
+## 📄 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
