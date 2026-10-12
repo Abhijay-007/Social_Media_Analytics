@@ -149,13 +149,13 @@ To generate, simulate, and capture authentic, multi-channel social media activit
 
 | Platform | Channel Label | Scope / Data Focus |
 | :--- | :--- | :--- |
-| 🌐 **Global** | Global Observatory | Aggregated cross-platform intelligence & global demographics |
-| ✈️ **Telegram** | Telegram | Direct broadcasts, multi-room chat channels, and co-chatter ties |
-| 𝕏 **X (Twitter)** | X | Real-time sports commentary, trending hashtags, and live discourse |
-| 🤖 **Reddit** | Reddit | Thematic sub-communities, longform pop-culture debates & theories |
-| ▶️ **YouTube** | YouTube | Cinematic trailers, box-office feedback, and public comments |
-| 📸 **Instagram** | Instagram | Lifestyle aesthetics, visual showcases, and engagement tags |
-| 📘 **Facebook** | Facebook | Community groups, conversational posts, and comment threads |
+|  **Global** | Global Observatory | Aggregated cross-platform intelligence & global demographics |
+|  **Telegram** | Telegram | Direct broadcasts, multi-room chat channels, and co-chatter ties |
+|  **X (Twitter)** | X | Real-time sports commentary, trending hashtags, and live discourse |
+|  **Reddit** | Reddit | Thematic sub-communities, longform pop-culture debates & theories |
+|  **YouTube** | YouTube | Cinematic trailers, box-office feedback, and public comments |
+|  **Instagram** | Instagram | Lifestyle aesthetics, visual showcases, and engagement tags |
+|  **Facebook** | Facebook | Community groups, conversational posts, and comment threads |
 
 ---
 
