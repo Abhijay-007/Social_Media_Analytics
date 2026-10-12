@@ -2,30 +2,58 @@
 __pycache__/
 *.py[cod]
 *.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Virtual environment
 .venv/
 venv/
 env/
+ENV/
 
 # Environment variables
 .env
+.env.*
+*.env
 
-# Firebase credentials
+# Firebase credentials and secrets
 credentials/
+*.json
+!requirements*.json
+!package*.json
 *service-account*.json
 firebase-service-account.json
 
-# Generated datasets
+# Generated datasets and local data
 data/raw/*
 data/processed/*
+*.sqlite3
+*.db
+
+# Logs and local runtime files
+*.log
+logs/
+coverage/
+htmlcov/
 
 # Jupyter
 .ipynb_checkpoints/
 
-# IDE
+# IDE / editor
 .vscode/
+.idea/
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Local build artifacts
+build/
+dist/
+site/
+
+# Node / frontend caches (if any toolchain is added later)
+node_modules/

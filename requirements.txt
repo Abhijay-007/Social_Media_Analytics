@@ -1,6 +1,9 @@
 firebase-admin
 pandas
 python-dotenv
+fastapi
+uvicorn
+networkx
 
 transformers
 torch
@@ -11,3 +14,6 @@ sentencepiece
 sentence-transformers
 scikit-learn
 numpy
+
+gradio
+plotly
