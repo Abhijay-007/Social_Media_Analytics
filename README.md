@@ -153,7 +153,7 @@ Social-media-analysis/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/Social-media-analysis.git
+git clone https://github.com/Abhijay-007/Social_Media_Analytics.git
 cd Social-media-analysis
 ```
 
