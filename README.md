@@ -1,1 +1,287 @@
-# Social-media-analysis
+# 🌐 Social Media Intelligence Observatory
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![React](https://img.shields.io/badge/React-18-61DAFB.svg?logo=react&logoColor=black)](https://react.dev)
+[![D3.js](https://img.shields.io/badge/D3.js-v7-F9A03C.svg?logo=d3.js&logoColor=white)](https://d3js.org)
+[![PyTorch](https://img.shields.io/badge/PyTorch-RoBERTa-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+A full-stack, AI-powered social media intelligence platform featuring multi-platform discourse aggregation, high-fidelity D3 network topology graph visualization, personal ego network analysis, demographic profiling across 37 countries, neural Retrieval-Augmented Generation (RAG), and real-time sentiment analysis via RoBERTa transformers.
+
+Designed with an ultra-crisp, desktop-first **Sapphire Royal Blue & Ice White** glassmorphic interface.
+
+---
+
+## 📑 Table of Contents
+
+- [Key Features](#-key-features)
+- [System Architecture](#-system-architecture)
+- [Supported Platforms](#-supported-platforms)
+- [Project Structure](#-project-structure)
+- [Installation & Setup](#-installation--setup)
+- [Running the Application](#-running-the-application)
+- [Data Extraction & Processing Pipeline](#-data-extraction--processing-pipeline)
+- [REST API Reference](#-rest-api-reference)
+- [UI Components & Navigation](#-ui-components--navigation)
+- [Tech Stack](#-tech-stack)
+- [License](#-license)
+
+---
+
+## 🚀 Key Features
+
+### 1. 🕸️ High-Fidelity D3 Network Topology & Personal Ego Networks
+- **Global Network Constellation**: Interactive force-directed physics graph with community modularity detection across thematic clusters.
+- **Account-Level Personal Ego Networks**: Clicking or searching any user transitions the canvas to a dedicated **Ego Network View**:
+  - Central node spotlight with glowing beacon and pulsating ring.
+  - Radial arrangement of direct alters (peers).
+  - Labeled interaction links denoting connection types (`💬 Co-Chatter`, `👥 Follower`, `✍️ Commented`, `⚡ Interacted`).
+  - Click-to-traverse functionality allowing instant exploration across user relationships.
+
+### 2. 👥 Global Location Analytics & Demographic Intelligence
+- **1,200+ Profile Dataset**: Audience telemetry across 37 countries and 50+ metropolitan centers.
+- **Geographic Country Breakdown**: Top concentrations with country flags and percentage shares (India, USA, China, Canada, UK, Australia, South Africa, Italy).
+- **Urban Metro Coordinates**: Precise latitude/longitude coordinates (Rome, Mexico City, Toronto, Pune, Denver, Houston, Berlin, Shanghai).
+- **Demographic Age Pyramid**: 5-tier age bracket distribution with median community age tracking.
+- **Linguistic & Career Distributions**: Primary languages (English, Spanish, German, Mandarin, Tamil, Hindi) and professional fields (Esports Analytics, Sports Journalism, Sabermetrics, etc.).
+- **Behavioral Audience Personas**: Structured tiers including *Professional Analyst*, *Data Analyst*, *Journalist*, *Researcher*, *Coach*, *Scout*, *Community Builder*, and *Content Creator*.
+- **Category Affinity Matrix**: Cross-tabulated demographic affinity scores across Tech, Design, Sports, Cinema, and Lifestyle.
+
+### 3. 🤖 Neural RAG Knowledge Engine
+- Semantically indexes **4,600+ social discourse documents** and demographic profiles using vector embeddings (`sentence-transformers/all-MiniLM-L6-v2`).
+- Grounded executive synthesis summarizing cross-platform discourse, sentiment polarity spreads, and verified evidence cards.
+- Interactive prompt chips for exploring topics, user accounts, and location patterns.
+
+### 4. 🧪 Live Sentiment Alchemist
+- Real-time text evaluation using **`cardiffnlp/twitter-roberta-base-sentiment-latest`** (RoBERTa transformer).
+- Provides polarity classification (Positive / Neutral / Critical), neural confidence ratings, and percentage resonance breakdowns.
+
+### 5. 🖥️ Desktop-First, Clean Percentage UI
+- Expansive widescreen layout (optimized up to 1600px+).
+- High-DPI canvas scaling (`devicePixelRatio: 2x`) for razor-sharp charts on Retina/4K displays.
+- Strict **percentage-based metric formatting**—no raw integer clutter.
+
+---
+
+## 🏗️ System Architecture
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                        FastAPI Server (server.py)                     │
+│                        Port: 7860 | Host: 0.0.0.0                      │
+└───────┬────────────────────────────┬────────────────────────────┬──────┘
+        │                            │                            │
+        ▼                            ▼                            ▼
+┌──────────────────┐       ┌──────────────────┐       ┌──────────────────┐
+│   Static Client  │       │  Data Manager &  │       │   Neural RAG &   │
+│   (public/)      │       │ Graph Loader     │       │ Transformer NLP  │
+│                  │       │ (data_loader.py) │       │ (rag_engine.py)  │
+│  • React 18      │       │                  │       │                  │
+│  • D3.js v7      │       │ • NetworkX Graph │       │ • MiniLM Embeds  │
+│  • Chart.js      │       │ • Demographics   │       │ • RoBERTa Model  │
+│  • Babel Stand.  │       │ • Multi-Platform │       │ • FAISS/Cosine   │
+└──────────────────┘       └─────────┬────────┘       └──────────────────┘
+                                     │
+                                     ▼
+                   ┌──────────────────────────────────┐
+                   │    Processed Data (data/)        │
+                   │  • user.json (1,200 profiles)    │
+                   │  • users.json (Graph nodes)      │
+                   │  • posts.json & comments.json    │
+                   │  • karuthu_synthetic_chats.json  │
+                   │  • follow_relationships.json     │
+                   └──────────────────────────────────┘
+```
+
+---
+
+## 📱 Supported Platforms
+
+| Platform | Channel Label | Scope / Data Focus |
+| :--- | :--- | :--- |
+| 🌐 **Global** | Global Observatory | Aggregated cross-platform intelligence & global demographics |
+| ✈️ **Telegram** | Telegram | Direct broadcasts, multi-room chat channels, and co-chatter ties |
+| 𝕏 **X (Twitter)** | X | Real-time sports commentary, trending hashtags, and live discourse |
+| 🤖 **Reddit** | Reddit | Thematic sub-communities, longform pop-culture debates & theories |
+| ▶️ **YouTube** | YouTube | Cinematic trailers, box-office feedback, and public comments |
+| 📸 **Instagram** | Instagram | Lifestyle aesthetics, visual showcases, and engagement tags |
+| 📘 **Facebook** | Facebook | Community groups, conversational posts, and comment threads |
+
+---
+
+## 📁 Project Structure
+
+```bash
+Social-media-analysis/
+├── credentials/                 # Firebase Service Account credentials
+├── dashboard/
+│   ├── data_loader.py           # Multi-platform data aggregation & NetworkX graph engine
+│   ├── rag_engine.py            # Neural RAG indexing & semantic search
+│   └── theme.py                 # Color palettes & styling constants
+├── data/
+│   ├── raw/                     # Raw extracted datasets
+│   └── processed/               # Normalized JSON files (users, posts, chats, etc.)
+│       ├── user.json            # 1,200 demographic & location profiles
+│       ├── users.json           # 192 interactive network graph nodes
+│       ├── ui_data.json         # Pre-compiled export payload for frontend
+│       └── ...
+├── extraction/
+│   ├── normalize.py             # Schema normalization script
+│   ├── analyze_demographics.py  # Demographic statistical distributions
+│   ├── build_user_evidence.py   # Grounded discourse evidence compilation
+│   ├── build_interest_profiles.py # Thematic interest profiler
+│   ├── build_behavioral_profiles.py # Behavioral persona classification
+│   └── extract.py               # Raw source data extraction
+├── public/
+│   ├── index.html               # Main HTML entry point
+│   ├── app.jsx                  # React 18 Application (SPA)
+│   └── style.css                # Glassmorphic CSS stylesheet
+├── .gitignore
+├── requirements.txt             # Python dependencies
+├── server.py                    # FastAPI server entry point
+└── README.md                    # Project documentation
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### Prerequisites
+- **Python 3.10+**
+- Recommended: Modern web browser (Chrome, Edge, Firefox, Safari)
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/Social-media-analysis.git
+cd Social-media-analysis
+```
+
+### 2. Create and Activate Virtual Environment
+```bash
+python3 -m venv .venv
+source .venv/bin/activate    # On Windows: .venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🏃 Running the Application
+
+Launch the server:
+```bash
+python server.py
+```
+
+The observatory will be accessible at:
+👉 **`http://localhost:7860`** (or `http://127.0.0.1:7860`)
+
+> **Note**: On first boot, the server will index the RAG corpus (~4,600 documents) and lazily load the RoBERTa sentiment model upon the first inference query.
+
+---
+
+## 🔄 Data Extraction & Processing Pipeline
+
+The dynamic pipeline processes raw multi-channel social logs into enriched graph structures and demographic profiles:
+
+```bash
+# Run the pipeline sequentially:
+python extraction/normalize.py
+python extraction/analyze_demographics.py
+python extraction/build_user_evidence.py
+python extraction/build_interest_profiles.py
+python extraction/build_behavioral_profiles.py
+```
+
+Alternatively, trigger the re-extraction directly from the UI using the **`Re-Extract Data`** button in the top navigation bar, or via API:
+```bash
+curl -X POST http://localhost:7860/api/extract
+```
+
+---
+
+## 🔌 REST API Reference
+
+### `GET /api/data`
+Returns multi-platform metrics, platform feed posts, author distributions, hashtag trends, and D3 network graph nodes & edges.
+
+### `GET /api/demographics`
+Returns global demographic analytics:
+- Country & territory distribution
+- Top cities with geographic latitude and longitude
+- Primary languages spoken
+- Occupational domains
+- Age brackets and pyramid
+- Behavioral persona segments
+- Age $\times$ category affinity cross-tabulation
+
+### `POST /api/rag/query`
+Executes semantic retrieval across the discourse corpus.
+- **Request Body**:
+  ```json
+  {
+    "query": "Ruturaj Gaikwad and CSK captaincy selection",
+    "platform": "all"
+  }
+  ```
+- **Response**: Summary synthesis, polarity percentages, grounded source snippets, and follow-up prompts.
+
+### `POST /api/analyze`
+Evaluates text sentiment using CardiffNLP RoBERTa.
+- **Request Body**:
+  ```json
+  {
+    "text": "Great tactical performance by the team today!"
+  }
+  ```
+- **Response**: Polarity label (`positive`, `neutral`, `negative`), confidence score, and percentage resonance.
+
+### `POST /api/extract`
+Triggers the multi-stage extraction pipeline and re-indexes the RAG corpus in the background.
+
+---
+
+## 🖥️ UI Components & Navigation
+
+The platform contains 6 primary analytical views:
+
+1. **🕸️ Network Graph & Dossier**:
+   - D3.js force-directed constellation graph.
+   - Zoom, pan, center, and pause physics simulation controls.
+   - Search bar for locating users by handle (`@username`), city, or country.
+   - Persona filters (`Data Analyst`, `Professional Analyst`, `Community Builder`, etc.).
+   - Full User Dossier panel featuring ego ties, observed content preferences, and recent discourse.
+2. **👥 Location & Demographics**:
+   - Geographic country ranking bars with flags.
+   - City cards displaying `lat`/`lng` coordinates.
+   - Language and occupational leaderboards.
+   - Age pyramid and cross-tabulated affinity matrix.
+3. **🤖 Neural RAG Knowledge Engine**:
+   - Natural language search box with pre-built prompt chips.
+   - AI synthesis card with polarity distribution bars.
+   - Grounded context snippets with platform indicators and relevance match percentages.
+4. **📊 Overview & Topics**:
+   - Ultra-crisp high-DPI Sentiment Equilibrium doughnut chart.
+   - Top Narrative Themes horizontal bar chart.
+5. **📜 Channel Chronicle**:
+   - Multi-platform chronological feed with author badges, tags, and comment threads.
+   - Real-time author and keyword filter.
+6. **🧪 Live Sentiment Alchemist**:
+   - Interactive prompt evaluation workspace powered by RoBERTa.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend**: [FastAPI](https://fastapi.tiangolo.com), [Uvicorn](https://www.uvicorn.org), [Python 3.10+](https://python.org)
+- **NLP & AI**: [HuggingFace Transformers](https://huggingface.co/transformers) (`cardiffnlp/twitter-roberta-base-sentiment-latest`), [Sentence-Transformers](https://sbert.net) (`all-MiniLM-L6-v2`), [PyTorch](https://pytorch.org)
+- **Graph & Network Analysis**: [NetworkX](https://networkx.org) (Modularity communities, PageRank, Spring layout)
+- **Frontend**: [React 18](https://react.dev), [D3.js v7](https://d3js.org), [Chart.js](https://www.chartjs.org), Babel Standalone
+- **Design System**: Sapphire Royal Blue & Ice White glassmorphism, responsive CSS variables, High-DPI Canvas scaling
+
+---
+
