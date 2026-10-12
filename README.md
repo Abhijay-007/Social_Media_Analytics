@@ -309,28 +309,28 @@ Triggers the multi-stage extraction pipeline and re-indexes the RAG corpus in th
 
 The platform contains 6 primary analytical views:
 
-1. ** Network Graph & Dossier**:
+1. **Network Graph & Dossier**:
    - D3.js force-directed constellation graph.
    - Zoom, pan, center, and pause physics simulation controls.
    - Search bar for locating users by handle (`@username`), city, or country.
    - Persona filters (`Data Analyst`, `Professional Analyst`, `Community Builder`, etc.).
    - Full User Dossier panel featuring ego ties, observed content preferences, and recent discourse.
-2. ** Location & Demographics**:
+2. **Location & Demographics**:
    - Geographic country ranking bars with flags.
    - City cards displaying `lat`/`lng` coordinates.
    - Language and occupational leaderboards.
    - Age pyramid and cross-tabulated affinity matrix.
-3. ** Neural RAG Knowledge Engine**:
+3. **Neural RAG Knowledge Engine**:
    - Natural language search box with pre-built prompt chips.
    - AI synthesis card with polarity distribution bars.
    - Grounded context snippets with platform indicators and relevance match percentages.
-4. ** Overview & Topics**:
+4. **Overview & Topics**:
    - Ultra-crisp high-DPI Sentiment Equilibrium doughnut chart.
    - Top Narrative Themes horizontal bar chart.
-5. ** Channel Chronicle**:
+5. **Channel Chronicle**:
    - Multi-platform chronological feed with author badges, tags, and comment threads.
    - Real-time author and keyword filter.
-6. ** Live Sentiment Alchemist**:
+6. **Live Sentiment Alchemist**:
    - Interactive prompt evaluation workspace powered by RoBERTa.
 
 ---
